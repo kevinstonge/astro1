@@ -1,0 +1,53 @@
+---
+export interface Props {
+	title?: string;
+}
+import Nav from './Nav.astro';
+const { title = "/< ≤" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header>
+			<Nav title={title}/>
+		</header>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--clr-darkest: #060905;
+		--clr-darker: #0f1411;
+		--clr-dark: #1a2020;
+		--clr-medium: #232527;
+		--clr-light: #696478;
+		--clr-lighter: #d3c9dd;
+		--clr-lightest: #fcf8ff;
+		--clr-highlight-primary: #cd72fa;
+		--clr-highlight-secondary: #86ceff;
+		--clr-highlight-warning: #ff745e;
+		--clr-highlight-success: #52f67b;
+	}
+	html {
+		font-family: 'Courier New', Courier, monospace;
+		background-color: var(--clr-darker);
+		color: var(--clr-lighter);
+	}
+	h1, h2, h3, h4, p {
+		margin: 0; padding: 0;
+	}
+	body, main, .card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+</style>

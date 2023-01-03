@@ -1,0 +1,37 @@
+---
+export interface Props {
+	body: string;
+	href: string;
+}
+const { href, body } = Astro.props;
+---
+<div class="card">
+	<p>{body}</p>
+	<div class="cardTools">
+		<a href="">[v]</a>
+		<a href="">[x]</a>
+		<a href="">[c]</a>
+	</div>
+</div>
+<style>
+	.card {
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		max-width: 40rem;
+		background-color: var(--clr-darkest);
+		color: var(--clr-lightest);
+	}
+	.cardTools {
+		background-color: var(--clr-darker);
+		border-radius: 0.5rem;
+		padding: 0.25rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 2rem;
+	}
+	.cardTools a {
+		color: var(--clr-lightest);
+		text-decoration: none;
+	}
+</style>

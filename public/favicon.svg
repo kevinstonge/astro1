@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+	<style>
+    .a {
+      font: bold 32px monospace;
+      fill: #cd72fa;
+    }
+  </style>
+  <text x="0" y="27" textLength="36px" class="a">&#47;&lt; ≤</text>
+</svg>
